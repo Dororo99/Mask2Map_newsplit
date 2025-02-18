@@ -38,8 +38,8 @@ However, we observed limited performance in Mask2Map due to inter-network incons
 
 | Method | Backbone | BEVEncoder |Lr Schd | mAP| config | Download_phase1 | Download_phase2 |
 | :---: | :---: | :---: | :---: |  :---: |:----------------------------------------------------------------------------------------------------------------------------:|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|:---------------:|
-| Mask2Map| R50 |bevpool | 24ep | 71.6 | [config](https://github.com/SehwanChoi0307/Mask2Map/tree/main/projects/configs/mask2map/M2M_nusc_r50_full_2Phase_12n12ep.py) | [model_phase1](https://drive.google.com/file/d/1yWyYR-8HD6Ias5EdrfzDNbPMHcbV4jIZ/view?usp=sharing) | [model_phase2](https://drive.google.com/file/d/1eNwGSGAmHYip0nWjEb-HCYFiglLwTajW/view?usp=sharing) | 
-| Mask2Map| R50 |bevpool | 110ep | 75.4 | [config](https://github.com/SehwanChoi0307/Mask2Map/tree/main/projects/configs/mask2map/M2M_nusc_r50_full_2Phase_55n55ep.py) | [model_phase1](https://drive.google.com/file/d/1Jbjhjl1n9vY05MSuGS-cMEcM2Ck_AoFP/view?usp=sharing) | [model_phase2](https://drive.google.com/file/d/1SpZhat0T9Hq0pZQrHOAgVuru3O8eZyId/view?usp=sharing) |
+| Mask2Map| R50 |bevpool | 24ep | 71.6 | [config](https://github.com/SehwanChoi0307/Mask2Map/tree/main/projects/configs/mask2map/M2M_nusc_r50_full_2Phase_12n12ep.py) | [model_phase1](https://drive.google.com/file/d/1ntFC0yQmWmr1k9zKWfj4ii2Ty-bDH8js/view?usp=sharing) | [model_phase2](https://drive.google.com/file/d/1lEvVJvn5fLEd2qYNTnejvF_l4IdwXTt7/view?usp=sharing) | 
+| Mask2Map| R50 |bevpool | 110ep | 75.4 | [config](https://github.com/SehwanChoi0307/Mask2Map/tree/main/projects/configs/mask2map/M2M_nusc_r50_full_2Phase_55n55ep.py) | [model_phase1](https://drive.google.com/file/d/1nuFMOmH8UqHW3FlreX19Uf8Il2ldKV-E/view?usp=sharing) | [model_phase2](https://drive.google.com/file/d/1eX17lKbqkLqOkk18u7vPIQhDvuT5j81O/view?usp=sharing) |
 
 **Notes**: 
 - All the experiments are performed on 4 NVIDIA GeForce RTX 3090 GPUs. 
