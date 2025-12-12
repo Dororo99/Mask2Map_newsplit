@@ -28,6 +28,7 @@ from mmdet.apis import set_random_seed
 from mmseg import __version__ as mmseg_version
 
 from mmcv.utils import TORCH_VERSION, digit_version
+import wandb
 
 
 def parse_args():

@@ -309,7 +309,7 @@ data = dict(
     train=dict(
         type=dataset_type,
         data_root=data_root,
-        ann_file=data_root + "nuscenes_maptrv2_temporal_train.pkl",
+        ann_file=data_root + "nuscenes_map_infos_maptrv2_train_newsplit.pkl",
         pipeline=train_pipeline,
         classes=class_names,
         modality=input_modality,
@@ -329,8 +329,8 @@ data = dict(
     val=dict(
         type=dataset_type,
         data_root=data_root,
-        ann_file=data_root + "nuscenes_maptrv2_temporal_val.pkl",
-        map_ann_file=data_root + "nuscenes_map_anns_val.json",
+        ann_file=data_root + "nuscenes_map_infos_maptrv2_val_newsplit.pkl",
+        map_ann_file=data_root + "nuscenes_map_anns_val_newsplit.json",
         pipeline=test_pipeline,
         bev_size=(bev_h_, bev_w_),
         pc_range=point_cloud_range,
@@ -345,8 +345,8 @@ data = dict(
     test=dict(
         type=dataset_type,
         data_root=data_root,
-        ann_file=data_root + "nuscenes_maptrv2_temporal_val.pkl",
-        map_ann_file=data_root + "nuscenes_map_anns_val.json",
+        ann_file=data_root + "nuscenes_map_infos_maptrv2_val_newsplit.pkl",
+        map_ann_file=data_root + "nuscenes_map_anns_val_newsplit.json",
         pipeline=test_pipeline,
         bev_size=(bev_h_, bev_w_),
         pc_range=point_cloud_range,
@@ -393,8 +393,16 @@ evaluation = dict(
 runner = dict(type="EpochBasedRunner", max_epochs=total_epochs)
 
 log_config = dict(
-    interval=50,
-    hooks=[dict(type="TextLoggerHook"), dict(type="TensorboardLoggerHook")],
+    interval=1,
+    hooks=[dict(type="TextLoggerHook"), 
+           dict(type="TensorboardLoggerHook"),
+            dict(type='WandbLoggerHook',
+            init_kwargs=dict(
+                project = 'mask2map_newsplit',
+                name = 'mask2map_newsplit_phase1'
+                ),
+            ),
+    ]
 )
 fp16 = dict(loss_scale=512.0)
 checkpoint_config = dict(max_keep_ckpts=2, interval=1)
